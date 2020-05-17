@@ -1,0 +1,14 @@
+{
+  "dice": 100,
+  "table": {
+  	"Engine, Thrusters, Jump Drive Non-Functioning": { 
+      "rng": [0, 80]
+    },
+    "Stable Engine, Thrusters, Jump Drive": { 
+      "rng": [81, 93]
+    },
+    "Unstable Core": { 
+      "rng": [94, 99]
+    }
+  }
+}

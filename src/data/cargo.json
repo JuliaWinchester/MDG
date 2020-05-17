@@ -1,0 +1,125 @@
+{
+  "dice": 100,
+  "table": {
+  	"Body Bags (Full)": {
+      "rng": [00, 00]
+    },
+  	"Wine": {
+      "rng": [01, 09]
+    },
+  	"Complex Navigational Equipment": {
+      "rng": [10, 19]
+    },
+  	"Ceramics": {
+      "rng": [20, 24]
+    },
+  	"Antique Books": {
+      "rng": [25, 29]
+    },
+  	"Garden Gnomes (Full of Illegal Stimulants)": {
+      "rng": [30, 34]
+    },
+  	"Opium": {
+      "rng": [35, 39]
+    },
+  	"Tea": {
+      "rng": [40, 44]
+    },
+  	"Silver Bars": {
+      "rng": [45, 49]
+    },
+  	"Sensitive Documents": {
+      "rng": [50, 54]
+    },
+  	"Anthropology Mission": {
+      "rng": [55, 57]
+    },
+  	"Botanists/Horticulturists": {
+      "rng": [58, 60]
+    },
+  	"Industrial Engineers/Architects": {
+      "rng": [61, 63]
+    },
+  	"Terraforming Equipment": {
+      "rng": [64, 66]
+    },
+  	"Hydroponic Plants": {
+      "rng": [67, 69]
+    },
+  	"Rare Wood": {
+      "rng": [70, 71]
+    },
+  	"Lab Rats": {
+      "rng": [72, 73]
+    },
+  	"Cultured Cells": {
+      "rng": [74, 75]
+    },
+  	"Cremains": {
+      "rng": [76, 77]
+    },
+  	"Drug Production Starter Equipment": {
+      "rng": [78, 79]
+    },
+  	"Common Cloth": {
+      "rng": [80, 80]
+    },
+  	"Designer Clothes": {
+      "rng": [81, 81]
+    },
+  	"Expensive Fish (Food)": {
+      "rng": [82, 82]
+    },
+  	"Pets": {
+      "rng": [83, 83]
+    },
+  	"Plastic Junk (Gewgaws)": {
+      "rng": [84, 84]
+    },
+  	"Legionaries (Guns & Ammo)": {
+      "rng": [85, 85]
+    },
+  	"Religious Pilgrims (Religious Texts & Symbols)": {
+      "rng": [86, 86]
+    },
+  	"Compressed Algae Blocks (1 = Days Rations, Gross)": {
+      "rng": [87, 87]
+    },
+  	"Disarmed Ordinance (Lack Detonators)": {
+      "rng": [88, 88]
+    },
+  	"Cars (High End)": {
+      "rng": [89, 89]
+    },
+  	"Medicine": {
+      "rng": [90, 90]
+    },
+  	"Cosmetics": {
+      "rng": [91, 91]
+    },
+  	"Race Horse Reproductive Material (If Kept Cold, Among the Most Valuable Things in the Universe)": {
+      "rng": [92, 92]
+    },
+  	"Livestock": {
+      "rng": [93, 93]
+    },
+  	"Prisoners": {
+      "rng": [94, 94]
+    },
+  	"Mobile Black Site (Used For Completely Illegal Interrogation)": {
+      "rng": [95, 95]
+    },
+  	"Census Takers": {
+      "rng": [96, 96]
+    },
+  	"Cadmium": {
+      "rng": [97, 97]
+    },
+  	"Preserved Fruit": {
+      "rng": [98, 98]
+    },
+  	"Refugees (Maybe Make This an Alien Prisoner)": {
+      "rng": [99, 99]
+    }
+  }
+}

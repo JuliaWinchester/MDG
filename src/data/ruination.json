@@ -1,0 +1,125 @@
+{
+  "dice": 100,
+  "table": {
+  	"Virus": {
+      "rng": [00, 00]
+    },
+  	"Combat": {
+      "rng": [01, 09]
+    },
+  	"Raided by Pirates": {
+      "rng": [10, 19]
+    },
+  	"Hyperspace Malfunction": {
+      "rng": [20, 24]
+    },
+  	"Abandoned Ship": {
+      "rng": [25, 29]
+    },
+  	"Insane AI": {
+      "rng": [30, 34]
+    },
+  	"Mutiny": {
+      "rng": [35, 39]
+    },
+  	"Crash: Other Ship": {
+      "rng": [40, 44]
+    },
+  	"Crash: Space Debris": {
+      "rng": [45, 49]
+    },
+  	"Crash: Jump Drive Miscalculation": {
+      "rng": [50, 54]
+    },
+  	"Engine Failure": {
+      "rng": [55, 57]
+    },
+  	"Cannibalism": {
+      "rng": [58, 60]
+    },
+  	"Nerve Gas": {
+      "rng": [61, 63]
+    },
+  	"Escape Pod Never Returned": {
+      "rng": [64, 66]
+    },
+  	"Betrayal/Backstabbing": {
+      "rng": [67, 69]
+    },
+  	"Succumbed to Nightmares": {
+      "rng": [70, 71]
+    },
+  	"Hatch Opened, No Air": {
+      "rng": [72, 73]
+    },
+  	"Cargo Created Mishap": {
+      "rng": [74, 75]
+    },
+  	"Starvation": {
+      "rng": [76, 77]
+    },
+  	"Part of a Conspiracy": {
+      "rng": [78, 79]
+    },
+  	"Thrusters Slagged": {
+      "rng": [80, 80]
+    },
+  	"Weapons System Malfunction": {
+      "rng": [81, 81]
+    },
+  	"Cryosleep Never Disengaged": {
+      "rng": [82, 82]
+    },
+  	"Complex Series of Events": {
+      "rng": [83, 83]
+    },
+  	"Suicide Pact": {
+      "rng": [84, 84]
+    },
+  	"Parasite Infestation": {
+      "rng": [85, 85]
+    },
+  	"Environmental Systems Failure": {
+      "rng": [86, 86]
+    },
+  	"Uncontrollable Fire": {
+      "rng": [87, 87]
+    },
+  	"Failed Fraud Attempt": {
+      "rng": [88, 88]
+    },
+  	"Void Worshipping": {
+      "rng": [89, 89]
+    },
+  	"Bizarre Love Triangle": {
+      "rng": [90, 90]
+    },
+  	"Fight Spiraled Out of Control": {
+      "rng": [91, 91]
+    },
+  	"Chainsaw Rampage": {
+      "rng": [92, 92]
+    },
+  	"Drug Addled Debauchery": {
+      "rng": [93, 93]
+    },
+  	"Fatal Depressurization": {
+      "rng": [94, 94]
+    },
+  	"Nightmares Ending in Heart Attack": {
+      "rng": [95, 95]
+    },
+  	"Mob Hit": {
+      "rng": [96, 96]
+    },
+  	"Crew Members Vanished": {
+      "rng": [97, 97]
+    },
+  	"Prank Taken Too Far": {
+      "rng": [98, 98]
+    },
+  	"William Tell Trick": {
+      "rng": [99, 99]
+    }
+  }
+}

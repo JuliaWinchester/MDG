@@ -1,0 +1,59 @@
+{
+  "dice": 100,
+  "table": {
+  	"Mining Frigate": {
+  		"rng": [0, 34],
+      "module_number": 12,
+      "level_number": 2,
+      "extra_levels": true
+  	},
+    "Freighter": {
+      "rng": [35, 57],
+      "module_number": 17,
+      "level_number": 2,
+      "extra_levels": true
+    },
+    "Shuttle": {
+      "rng": [58, 71],
+      "module_number": 7,
+      "level_number": 1,
+      "extra_levels": false
+    },
+    "Courier": {
+      "rng": [72, 80],
+      "module_number": 4,
+      "level_number": 1,
+      "extra_levels": false
+    },
+    "Research Vessel": {
+      "rng": [81, 84],
+      "module_number": 8,
+      "level_number": 1,
+      "extra_levels": true
+    },
+    "Blockade Runner": {
+      "rng": [85, 88],
+      "module_number": 15,
+      "level_number": 1,
+      "extra_levels": true
+    },
+    "Cutter": {
+      "rng": [89, 91],
+      "module_number": 10,
+      "level_number": 2,
+      "extra_levels": true
+    },
+    "Troopship": {
+      "rng": [92, 95],
+      "module_number": 15,
+      "level_number": 2,
+      "extra_levels": true
+    },
+    "Colony Ship": {
+      "rng": [96, 99],
+      "module_number": 20,
+      "level_number": 3,
+      "extra_levels": true
+    }
+  }
+}

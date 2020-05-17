@@ -1,0 +1,107 @@
+[
+  {
+    "dice": 10,
+    "table": {
+      "Iago": {
+        "rng": [0, 0]
+      },
+      "Hecate": {
+        "rng": [1, 1]
+      },
+      "Oberon": {
+        "rng": [2, 2]
+      },
+      "Whitehall": {
+        "rng": [3, 3]
+      },
+      "Duncan": {
+        "rng": [4, 4]
+      },
+      "Banquo": {
+        "rng": [5, 5]
+      },
+      "Winter": {
+        "rng": [6, 6]
+      },
+      "Marlowe": {
+        "rng": [7, 7]
+      },
+      "Tempest": {
+        "rng": [8, 8]
+      },
+      "Faust": {
+        "rng": [9, 9]
+      } 
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Valefor": {
+        "rng": [0, 0]
+      },
+      "Ophanim": {
+        "rng": [1, 1]
+      },
+      "Marax": {
+        "rng": [2, 2]
+      },
+      "Mariner": {
+        "rng": [3, 3]
+      },
+      "Labolas": {
+        "rng": [4, 4]
+      },
+      "Astaroth": {
+        "rng": [5, 5]
+      },
+      "Cherubim": {
+        "rng": [6, 6]
+      },
+      "Tyrant": {
+        "rng": [7, 7]
+      },
+      "Balaam": {
+        "rng": [8, 8]
+      },
+      "Murmur": {
+        "rng": [9, 9]
+      }
+    } 
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Echo": {
+        "rng": [0, 0]
+      },
+      "Alpha": {
+        "rng": [1, 1]
+      },
+      "Omega": {
+        "rng": [2, 2]
+      },
+      "King": {
+        "rng": [3, 3]
+      },
+      "Beggar": {
+        "rng": [4, 4]
+      },
+      "Delta": {
+        "rng": [5, 5]
+      },
+      "Epsilon": {
+        "rng": [6, 6]
+      },
+      "Jibril": {
+        "rng": [7, 7]
+      },
+      "Bravo": {
+        "rng": [8, 8]
+      },
+      "Tango": {
+        "rng": [9, 9]
+      } 
+    }
+  }
+]

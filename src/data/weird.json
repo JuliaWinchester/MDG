@@ -1,0 +1,125 @@
+{
+  "dice": 100,
+  "table": {
+  	"Haunted": {
+      "rng": [00, 00]
+    },
+  	"Inhabited by Alien Life": {
+      "rng": [01, 09]
+    },
+  	"Terraformed by Strange Creatures": {
+      "rng": [10, 19]
+    },
+  	"Crew Dressed for Costume Party": {
+      "rng": [20, 24]
+    },
+  	"Crew All Identical": {
+      "rng": [25, 29]
+    },
+  	"Crew was preparing Theatrical Performance": {
+      "rng": [30, 34]
+    },
+  	"Morbid Artwork": {
+      "rng": [35, 39]
+    },
+  	"Pet Hoarders": {
+      "rng": [40, 44]
+    },
+  	"Erotic Sculptures": {
+      "rng": [45, 49]
+    },
+  	"Communist Regalia": {
+      "rng": [50, 54]
+    },
+  	"Company Uniform": {
+      "rng": [55, 57]
+    },
+  	"Cult Members": {
+      "rng": [58, 60]
+    },
+  	"Extensive Journals Kept": {
+      "rng": [61, 63]
+    },
+  	"Strange Health Obsession": {
+      "rng": [64, 66]
+    },
+  	"Unnervingly Clean": {
+      "rng": [67, 69]
+    },
+  	"Android was Poisoning Captain": {
+      "rng": [70, 71]
+    },
+  	"Ancient Ship": {
+      "rng": [72, 73]
+    },
+  	"Temporal Distortions": {
+      "rng": [74, 75]
+    },
+  	"Failed Utopia": {
+      "rng": [76, 77]
+    },
+  	"Crew Weighed and Measured Weekly": {
+      "rng": [78, 79]
+    },
+  	"Extensive Body Modification": {
+      "rng": [80, 80]
+    },
+  	"Isolated Physics Anomalies": {
+      "rng": [81, 81]
+    },
+  	"Sexual Deviants": {
+      "rng": [82, 82]
+    },
+  	"Religious Extremists": {
+      "rng": [83, 83]
+    },
+  	"Transhumanist Android Worshippers": {
+      "rng": [84, 84]
+    },
+  	"Anti-Android Conspiracists": {
+      "rng": [85, 85]
+    },
+  	"Nauseating Stench": {
+      "rng": [86, 86]
+    },
+  	"Everything is Jury-Rigged": {
+      "rng": [87, 87]
+    },
+  	"Crew Taking Video Through the Catastrophe": {
+      "rng": [88, 88]
+    },
+  	"Body Horror": {
+      "rng": [89, 89]
+    },
+  	"Scooby-Doo Crew": {
+      "rng": [90, 90]
+    },
+  	"Interior Coated in Flesh, Doors are Membranes": {
+      "rng": [91, 91]
+    },
+  	"Whispering Echoes Always a Room Ahead": {
+      "rng": [92, 92]
+    },
+  	"Dolls in Macabre Tableaux": {
+      "rng": [93, 93]
+    },
+  	"Dead Crew: Exploded Heads": {
+      "rng": [94, 94]
+    },
+  	"Elaborately Posed Corpses (Hooks & Chains)": {
+      "rng": [95, 95]
+    },
+  	"Flickering Lights and Frenzied Screams": {
+      "rng": [96, 96]
+    },
+  	"Ship Rearranges Itself Frequently": {
+      "rng": [97, 97]
+    },
+  	"Ship Has Infinite Depth": {
+      "rng": [98, 98]
+    },
+  	"Fruit Basket, Greeting Card Inexplicably Addressed to Crew": {
+      "rng": [99, 99]
+    }
+  }
+}

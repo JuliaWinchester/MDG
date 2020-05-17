@@ -1,0 +1,14 @@
+{
+	"dice": 100,
+  "table": {
+    "Uninhabitable": { 
+      "rng": [0, 84]
+    },
+    "Habitable (Non-Functioning)": { 
+      "rng": [85, 94] 
+    },
+    "Habitable (Functioning)": { 
+      "rng": [95, 99] 
+    }
+  }
+}

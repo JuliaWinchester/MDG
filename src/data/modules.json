@@ -1,0 +1,196 @@
+[
+  {
+    "dice": 10,
+    "table": {
+      "Command": {
+        "rng": [0, 0],
+        "description": "Single cockpit, scarred by gunfire."
+      },
+      "Command": {
+        "rng": [1, 1],
+        "description": "Bridge with working comm station."
+      },
+      "Life Support": {
+        "rng": [2, 2],
+        "description": "Functional."
+      },
+      "Life Support": {
+        "rng": [3, 3],
+        "description": "Repairable."
+      },
+      "Life Support": {
+        "rng": [4, 4],
+        "description": "Non-repairable."
+      },
+      "Life Support": {
+        "rng": [5, 5],
+        "description": "Radioactive (Body Save or 1d10 dmg)."
+      },
+      "Computer": {
+        "rng": [6, 6],
+        "description": "Contains an intact map of the current sector."
+      },
+      "Computer": {
+        "rng": [7, 7],
+        "description": "Contains an intact map of a random sector."
+      },
+      "Weapon": {
+        "rng": [8, 9],
+        "description": "1. Laser Cutter. 2. Autocannon. 3. Railgun. 4. MG Turret. 5. Torpedoes. 6. Rigging Gun."
+      }
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Jump Drive": {
+        "rng": [0, 0],
+        "description": "Intact and salveageable."
+      },
+      "Jump Drive": {
+        "rng": [1, 1],
+        "description": "Completely smelted."
+      },
+      "Thrusters": {
+        "rng": [2, 2],
+        "description": "Intact and salveageable."
+      },
+      "Thrusters": {
+        "rng": [3, 4],
+        "description": "Completely smelted."
+      },
+      "Engine": {
+        "rng": [5, 6],
+        "description": "Intact and salveageable. 1d10 Fuel units."
+      },
+      "Engine": {
+        "rng": [7, 8],
+        "description": "Completely destroyed and unuseable."
+      },
+      "Engine": {
+        "rng": [9, 9],
+        "description": "Rigged to explode in 1d10 minutes."
+      }
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Galley": {
+        "rng": [0, 1],
+        "description": "1d10 supply units remaining."
+      },
+      "Galley": {
+        "rng": [2, 2],
+        "description": "Completely barren, booby trapped."
+      },
+      "Galley": {
+        "rng": [3, 3],
+        "description": "Roll on Weapon Cache table on page 13."
+      },
+      "Barracks": {
+        "rng": [4, 4],
+        "description": "One survivor unconscious."
+      },
+      "Barracks": {
+        "rng": [5, 5],
+        "description": "Roll on Weapon Cache table on page 13."
+      },
+      "Barracks": {
+        "rng": [6, 6],
+        "description": "Corpses."
+      },
+      "Living Quarters": {
+        "rng": [7, 7],
+        "description": "Roll on Weapon Cache table on page 13."
+      },
+      "Living Quarters": {
+        "rng": [8, 8],
+        "description": "Booby trapped."
+      },
+      "Living Quarters": {
+        "rng": [8, 9],
+        "description": "Stowaway squatting here."
+      }
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Medbay": {
+        "rng": [0, 0],
+        "description": "Stocked to the gills. Roll twice on Weapon Cache."
+      },
+      "Medbay": {
+        "rng": [1, 1],
+        "description": "Completely picked over."
+      },
+      "Medbay": {
+        "rng": [2, 2],
+        "description": "3d10 Pain Pills, 2d10 Stimpaks."
+      },
+      "Science Lab": {
+        "rng": [3, 3],
+        "description": "Strange creature in containment."
+      },
+      "Science Lab": {
+        "rng": [4, 4],
+        "description": "Quarantined. Body Save or 2d10 dmg."
+      },
+      "Cryochamber": {
+        "rng": [5, 5],
+        "description": "Filled with corpses. Fear Save or 1 stress."
+      },
+      "Cryochamber": {
+        "rng": [6, 7],
+        "description": "3d10 working cryopods."
+      },
+      "Cryochamber": {
+        "rng": [8, 8],
+        "description": "1d10 Cryopods that seem fine. 25% failure."
+      },
+      "Completely Destroyed Room": {
+        "rng": [9, 9],
+        "description": ""
+      }
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Cargo Hold": {
+        "rng": [0, 6],
+        "description": "Roll on Cargo table on page 9."
+      },
+      "Cargo Hold": {
+        "rng": [7, 7],
+        "description": "Completely and totally empty."
+      },
+      "Cargo Hold": {
+        "rng": [8, 9],
+        "description": "Currently being picked through by 2d10 armed scavenges. Roll on Cargo table on page 9."
+      }
+    }
+  },
+  {
+    "dice": 10,
+    "table": {
+      "Cargo Hold": {
+        "rng": [0, 3],
+        "description": "Roll on Cargo table on page 9."
+      },
+      "Engines": {
+        "rng": [4, 6],
+        "description": "1d10/2 squatters in Vaccsuits huddling around the warmth of the engines."
+      },
+      "Engines": {
+        "rng": [7, 7],
+        "description": "Strange creature infestation."
+      },
+      "Barracks": {
+        "rng": [8, 9],
+        "description": "Fight between 2d10 scavengers and crewmembers of the ship's original crew."
+      }
+    }
+  },
+]

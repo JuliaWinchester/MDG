@@ -1,0 +1,64 @@
+{
+  "general": {
+    "dice": 100,
+    "table": {
+    	"Scrap": {
+    		"rng": [0, 49],
+        "units": "2d100"
+    	},
+      "Fuel Units": {
+        "rng": [50, 75],
+        "units": "1d10"
+      },
+      "Galley Stock": {
+        "rng": [76, 81],
+        "units": "2d10"
+      },
+      "Cryopods": {
+        "rng": [82, 85],
+        "units": "1d10"
+      },
+      "Medbay": {
+        "rng": [86, 88],
+        "units": 1
+      },
+      "Weapon": {
+        "rng": [89, 91],
+        "units": 1
+      },
+      "Computer": {
+        "rng": [92, 95],
+        "units": 1
+      },
+      "Jump Drive": {
+        "rng": [96, 99],
+        "units": 1
+      }
+    }
+  }, 
+  "material": {
+    "dice": 100,
+    "table": {
+      "Ore": {
+        "rng": [0, 60],
+        "units": "4d10"
+      },
+      "Metal": {
+        "rng": [61, 75],
+        "units": "3d10"
+      },
+      "Trade Units of Random Cargo": {
+        "rng": [76, 85],
+        "units": "1d100"
+      },
+      "Precious Metal": {
+        "rng": [86, 92],
+        "units": "1d10"
+      },
+      "Contraband": {
+        "rng": [93, 99],
+        "units": "1d10"
+      }
+    }
+  }
+}
