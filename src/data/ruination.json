@@ -2,10 +2,10 @@
   "dice": 100,
   "table": {
   	"Virus": {
-      "rng": [00, 00]
+      "rng": [0, 0]
     },
   	"Combat": {
-      "rng": [01, 09]
+      "rng": [1, 9]
     },
   	"Raided by Pirates": {
       "rng": [10, 19]

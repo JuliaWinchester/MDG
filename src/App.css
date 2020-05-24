@@ -1,1 +1,43 @@
+.module {
+	height: 100%;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	overflow: hidden;
+}
 
+.moduleDescription {
+	border: 2px dashed green;
+	position: absolute;
+	top: 90%;
+	left: 90%;
+	background: white;
+	width: 200%;
+	min-height: 100%;
+	/*opacity: 0.95;*/
+}
+
+.module .module-icon {
+	display: inline;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.border {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.module-text {
+	margin: 0;
+}
+
+.module-header {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.react-grid-item:hover{
+	z-index: 1 !important;
+}

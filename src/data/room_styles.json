@@ -1,0 +1,17 @@
+{
+	"Command": "gamepad",
+	"Life Support": "fan",
+	"Computer": "server",
+	"Weapon": "bomb",
+	"Jump Drive": ["fab", "superpowers"],
+	"Thrusters": "rocket",
+  "Engine": "industry",
+  "Galley": "lemon",
+  "Barracks": "chess-knight",
+  "Living Quarters": "bed",
+  "Medbay": "prescription-bottle-alt",
+  "Science Lab": "microscope",
+  "Cryochamber": "icicles",
+  "Completely Destroyed Room": "dumpster-fire",
+  "Cargo Hold": "boxes"
+}

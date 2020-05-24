@@ -2,10 +2,10 @@
   "dice": 100,
   "table": {
   	"Haunted": {
-      "rng": [00, 00]
+      "rng": [0, 0]
     },
   	"Inhabited by Alien Life": {
-      "rng": [01, 09]
+      "rng": [1, 9]
     },
   	"Terraformed by Strange Creatures": {
       "rng": [10, 19]

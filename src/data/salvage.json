@@ -2,7 +2,7 @@
   "general": {
     "dice": 100,
     "table": {
-    	"Scrap": {
+    	"Scrap Units": {
     		"rng": [0, 49],
         "units": "2d100"
     	},
@@ -10,7 +10,7 @@
         "rng": [50, 75],
         "units": "1d10"
       },
-      "Galley Stock": {
+      "Galley Stock Units": {
         "rng": [76, 81],
         "units": "2d10"
       },

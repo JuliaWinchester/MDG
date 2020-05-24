@@ -1,6 +1,6 @@
 {
   "dice": 100,
-    "table": {
+  "table": {
   	"No Survivors": { 
       "rng": [0, 89], 
       "survivor_number": 0 
