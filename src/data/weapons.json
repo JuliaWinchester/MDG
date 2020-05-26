@@ -1,0 +1,23 @@
+{
+	"dice": 6,
+  "table": {
+    "Laser Cutter": { 
+      "rng": [0, 0]
+    },
+    "Autocannon": { 
+      "rng": [1, 1] 
+    },
+    "Railgun": { 
+      "rng": [2, 2] 
+    },
+    "MG Turret": { 
+      "rng": [3, 3] 
+    },
+    "Torpedoes": { 
+      "rng": [4, 4] 
+    },
+    "Rigging Gun": { 
+      "rng": [5, 5] 
+    }
+  }
+}

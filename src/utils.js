@@ -26,7 +26,7 @@ export function rollOn(tableObj) {
 		if (tableRoll >= table[entry]['rng'][0] && 
 			  tableRoll <= table[entry]['rng'][1]
 		) {
-			tableEntry = { 'title': entry, 'content': table[entry] };
+			tableEntry = Object.assign({ 'title': entry }, table[entry] );
 		}
 	}
 

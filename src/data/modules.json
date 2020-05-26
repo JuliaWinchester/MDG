@@ -45,7 +45,7 @@
       {
         "rng": [8, 9],
         "title": "Weapon",
-        "description": "Roll 1d6: 1. Laser Cutter. 2. Autocannon. 3. Railgun. 4. MG Turret. 5. Torpedoes. 6. Rigging Gun."
+        "description": "Ship Weaponry"
       }
     ]
   },
@@ -75,7 +75,10 @@
       {
         "rng": [5, 6],
         "title": "Engine",
-        "description": "Intact and salveageable. 1d10 Fuel units."
+        "description": "Intact and salveageable.",
+        "equipment": [
+          { "title": "Fuel Unit", "units": "1d10" }
+        ]
       },
       {
         "rng": [7, 8],
@@ -95,7 +98,10 @@
       {
         "rng": [0, 1],
         "title": "Galley",
-        "description": "1d10 supply units remaining."
+        "description": "",
+        "equipment": [
+          { "title": "Supply Unit", "units": "1d10" }
+        ]
       },
       {
         "rng": [2, 2],
@@ -105,17 +111,26 @@
       {
         "rng": [3, 3],
         "title": "Galley",
-        "description": "Roll on Weapon Cache table on page 13."
+        "description": "",
+        "equipment": [
+          { "title": "Weapon Cache", "units": 1 }
+        ]
       },
       {
         "rng": [4, 4],
         "title": "Barracks",
-        "description": "One survivor unconscious."
+        "description": "",
+        "survivors": [
+          { "title": "Unconscious survivor", "units": 1 }
+        ]
       },
       {
         "rng": [5, 5],
         "title": "Barracks",
-        "description": "Roll on Weapon Cache table on page 13."
+        "description": "",
+        "equipment": [
+          { "title": "Weapon Cache", "units": 1 }
+        ]
       },
       {
         "rng": [6, 6],
@@ -125,7 +140,10 @@
       {
         "rng": [7, 7],
         "title": "Living Quarters",
-        "description": "Roll on Weapon Cache table on page 13."
+        "description": "",
+        "equipment": [
+          { "title": "Weapon Cache", "units": 1 }
+        ]
       },
       {
         "rng": [8, 8],
@@ -135,7 +153,10 @@
       {
         "rng": [8, 9],
         "title": "Living Quarters",
-        "description": "Stowaway squatting here."
+        "description": "Stowaway squatting here.",
+        "survivors": [
+          { "title": "Stowaway", "units": 1 }
+        ]
       }
     ]
   },
@@ -145,7 +166,10 @@
       {
         "rng": [0, 0],
         "title": "Medbay",
-        "description": "Stocked to the gills. Roll twice on Weapon Cache."
+        "description": "Stocked to the gills.",
+        "equipment": [
+          { "title": "Weapon Cache", "units": 2 }
+        ]
       },
       {
         "rng": [1, 1],
@@ -155,12 +179,19 @@
       {
         "rng": [2, 2],
         "title": "Medbay",
-        "description": "3d10 Pain Pills, 2d10 Stimpaks."
+        "description": "",
+        "equipment": [
+          { "title": "Pain Pills", "units": "3d10" },
+          { "title": "Stimpaks", "units": "2d10" }
+        ]
       },
       {
         "rng": [3, 3],
         "title": "Science Lab",
-        "description": "Strange creature in containment."
+        "description": "Strange creature in containment.",
+        "survivors": [
+          { "title": "Strange Creature", "units": 1 }
+        ]
       },
       {
         "rng": [4, 4],
@@ -175,12 +206,18 @@
       {
         "rng": [6, 7],
         "title": "Cryochamber",
-        "description": "3d10 working cryopods."
+        "description": "Working cryopods.",
+        "equipment": [
+          { "title": "Cryopod", "units": "3d10" }
+        ]
       },
       {
         "rng": [8, 8],
         "title": "Cryochamber",
-        "description": "1d10 Cryopods that seem fine. 25% failure."
+        "description": "Cryopods that seem fine.",
+        "equipment": [
+          { "title": "Cryopod (25% Chance of Failure)", "units": "1d10" }
+        ]
       },
       {
         "rng": [9, 9],
@@ -195,7 +232,10 @@
       {
         "rng": [0, 6],
         "title": "Cargo Hold",
-        "description": "Roll on Cargo table on page 9."
+        "description": "",
+        "equipment": [
+          { "title": "Cargo", "units": "1d10" }
+        ]
       },
       {
         "rng": [7, 7],
@@ -205,7 +245,13 @@
       {
         "rng": [8, 9],
         "title": "Cargo Hold",
-        "description": "Currently being picked through by 2d10 armed scavenges. Roll on Cargo table on page 9."
+        "description": "Currently being picked through by armed scavengers.",
+        "equipment": [
+          { "title": "Cargo", "units": "1d10" }
+        ],
+        "survivors": [
+          { "title": "Armed Scavengers", "units": "2d10" }
+        ]
       }
     ]
   },
@@ -215,22 +261,35 @@
       {
         "rng": [0, 3],
         "title": "Cargo Hold",
-        "description": "Roll on Cargo table on page 9."
+        "description": "",
+        "equipment": [
+          { "title": "Cargo", "units": "1d10" }
+        ]
       },
       {
         "rng": [4, 6],
         "title": "Engine",
-        "description": "1d10/2 squatters in Vaccsuits huddling around the warmth of the engines."
+        "description": "Squatters in Vaccsuits huddling around the warmth of the engines.",
+        "survivors": [
+          { "title": "Vaccsuit Squatters", "units": "1d5" }
+        ]
       },
       {
         "rng": [7, 7],
         "title": "Engine",
-        "description": "Strange creature infestation."
+        "description": "Strange creature infestation.",
+        "survivors": [
+          { "title": "Strange Creature", "units": "1d4" }
+        ]
       },
       {
         "rng": [8, 9],
         "title": "Barracks",
-        "description": "Fight between 2d10 scavengers and crewmembers of the ship's original crew."
+        "description": "Fight between scavengers and crewmembers of the ship's original crew.",
+        "survivors": [
+          { "title": "Scavengers", "units": "1d10" },
+          { "title": "Original Crewmembers", "units": "1d10" }
+        ]
       }
     ]
   }

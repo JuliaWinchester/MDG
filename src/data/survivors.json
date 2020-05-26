@@ -2,16 +2,19 @@
   "dice": 100,
   "table": {
   	"No Survivors": { 
-      "rng": [0, 89], 
-      "survivor_number": 0 
+      "rng": [0, 89]
     },
     "Survivors (In Cryosleep)": { 
-      "rng": [90, 95], 
-      "survivor_number": "2d10" 
+      "rng": [90, 95],
+      "survivors": [
+        { "title": "Survivors In Cryosleep", "units": "2d10" }
+      ]
     },
     "Survivors": { 
       "rng": [96, 99], 
-      "survivor_number": "2d10" 
+      "survivors": [
+        { "title": "Survivors", "units": "2d10" }
+      ] 
     }
   }
 }

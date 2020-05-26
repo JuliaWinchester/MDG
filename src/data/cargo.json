@@ -2,10 +2,10 @@
   "dice": 100,
   "table": {
   	"Body Bags (Full)": {
-      "rng": [00, 00]
+      "rng": [0, 0]
     },
   	"Wine": {
-      "rng": [01, 09]
+      "rng": [1, 9]
     },
   	"Complex Navigational Equipment": {
       "rng": [10, 19]
@@ -23,7 +23,11 @@
       "rng": [35, 39]
     },
   	"Tea": {
-      "rng": [40, 44]
+      "rng": [40, 43]
+    },
+    "Little Kitten": {
+      "rng": [44, 44],
+      "units": 1
     },
   	"Silver Bars": {
       "rng": [45, 49]
@@ -32,7 +36,8 @@
       "rng": [50, 54]
     },
   	"Anthropology Mission": {
-      "rng": [55, 57]
+      "rng": [55, 57],
+      "units": 1
     },
   	"Botanists/Horticulturists": {
       "rng": [58, 60]
@@ -107,7 +112,8 @@
       "rng": [94, 94]
     },
   	"Mobile Black Site (Used For Completely Illegal Interrogation)": {
-      "rng": [95, 95]
+      "rng": [95, 95],
+      "units": 1
     },
   	"Census Takers": {
       "rng": [96, 96]

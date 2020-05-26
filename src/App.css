@@ -41,3 +41,7 @@
 .react-grid-item:hover{
 	z-index: 1 !important;
 }
+
+.react-grid-layout {
+	margin-bottom: 300px;
+}
