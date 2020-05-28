@@ -36,6 +36,7 @@ export default function Module(props) {
         style={{ 'height': '100%', 'width': '100%' }}
       >
         <FontAwesomeIcon className='module-icon' icon={roomStyles[props.item.title]} size='lg' />
+        <span>{props.number}</span>
       </div>
       {inHover && <ModuleDescription title={props.item.title} description={descStr} equipment={props.item.equipment} survivors={props.item.survivors} />}
     </div>

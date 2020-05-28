@@ -1,3 +1,11 @@
+#id {
+	margin-bottom: 300px;
+}
+
+.profile-block {
+	background-color: limegreen;
+}
+
 .module {
 	height: 100%;
 	width: 100%;
@@ -42,6 +50,8 @@
 	z-index: 1 !important;
 }
 
-.react-grid-layout {
-	margin-bottom: 300px;
+.profile-view {
+	border: 1px solid limegreen;
+	max-width: 100%;
 }
+

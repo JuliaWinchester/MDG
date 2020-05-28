@@ -4,10 +4,44 @@ import _ from "lodash";
 
 import ModuleGroup from './ModuleGroup';
 import Ship from './Ship';
+import ShipProfile from './ShipProfile';
 
 import './App.css';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
+
+function ShipLevel(props) {
+  return (
+    <div>
+      <b>SHIP LEVEL {props.number + 1}</b>
+      <ModuleGroup 
+        key={props.number}
+        cols={12} 
+        rowHeight={Math.ceil(props.width/12) - 10}
+        items={props.items}
+        layout={props.layout}
+      />
+    </div>    
+  );
+}
+
+function ShipLevels(props) {
+  let levels = _.map(_.range(props.number), function(i) {
+    return (
+      <ShipLevel
+        key={i}
+        number={i} 
+        width={props.width} 
+        items={props.levels[i].modules}
+        layout={props.levels[i].layout}
+      />
+    )
+  });
+
+  return (
+    levels
+  )
+}
 
 function ItemUnitsList(props) {
   let list = [];
@@ -43,17 +77,40 @@ function Description(props) {
   ); 
 }
 
+function GenerateShipButton(props) {
+  return (
+    <div>
+      <button type="button" onClick={(e) => props.onClick(e)}>Generate New Ship</button>
+    </div>
+  )
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    let ship = new Ship();
     this.state = {
-      ship: new Ship()
+      ship: ship,
+      shipLevels: ship.levels
     }
+  }
+
+  handleGenerateShipClick(e) {
+    e.preventDefault();
+    let ship = new Ship();
+    this.setState({
+      ship: ship,
+      shipLevels: ship.levels
+    })
   }
 
   render() {
     return (
       <div>
+        <GenerateShipButton
+          onClick={(e) => this.handleGenerateShipClick(e)}
+        />
         <Description
           ship={this.state.ship}
         />
@@ -62,12 +119,25 @@ class App extends React.Component {
           handleWidth
           handleHeight
           render={({ width, height }) => (
-            <ModuleGroup 
-              cols={12} 
-              rowHeight={Math.ceil(width/12) - 10}
-              items={this.state.ship.moduleContents}
-              layout={this.state.ship.moduleLayout}
-            />
+            <div>
+              <ShipProfile
+                view='front'
+                levels={this.state.shipLevels}
+                cols={12} 
+                width={width/2}
+              />
+              <ShipProfile
+                view='side'
+                levels={this.state.shipLevels}
+                cols={12} 
+                width={width/2}
+              />
+              <ShipLevels 
+                number={this.state.ship.levelNumber}
+                levels={this.state.ship.levels}
+                width={width} 
+              />
+            </div>
           )}
         />
       </div>

@@ -2,6 +2,7 @@ import _ from "lodash";
 
 export default class ModuleLayout {
 	constructor(n) {
+    this.branchRatio = 0.75;
     this.moduleNumber = n;
 		this.generateLayout();
 	}
@@ -12,7 +13,7 @@ export default class ModuleLayout {
       if (i === 0) {
         let initialPosition = {
           x: 5 + Math.floor(Math.random() * 2),
-          y: 2,
+          y: 5,
           w: 1,
           h: 1,
           i: i.toString()
@@ -30,7 +31,8 @@ export default class ModuleLayout {
     let self = this; 
 
     // Choose existing module
-    let node = this.layout[Math.floor(Math.random() * this.layout.length)];
+    // let node = this.layout[Math.floor(Math.random() * this.layout.length)];
+    let node = this.chooseNode();
 
     // console.log('Starting node:');
     // console.log(node);
@@ -69,23 +71,40 @@ export default class ModuleLayout {
         return p;
       })
 
+      //This preferentially chooses positions with fewer neighbors, but disabled for now
       let lonely = _.filter(positions, function(p) { return p.neighbors === 1; });
       let crowded = _.filter(positions, function(p) { return p.neighbors > 1; });
 
       if (lonely.length > 0 && crowded.length > 0) {
-        let tunnelRatio = 1.0;
         let rand = Math.random();
-        positions = rand < tunnelRatio ? lonely : crowded;
-        // console.log('Choosing ' + (rand < tunnelRatio ? 'lonely' : 'crowded') );
+        positions = rand < this.branchRatio ? lonely : crowded;
+        // console.log('Choosing new position: ' + (rand < this.branchRatio ? 'lonely' : 'crowded') );
       }
 
-      let chosen = positions[Math.floor(Math.random() * positions.length)]
+      let chosen = positions[Math.floor(Math.random() * positions.length)];
       // console.log('Chosen:');
       // console.log(chosen);
       this.layout.push(chosen);
     } else {
       this.addNewPosition(idx);
     }
+  }
+
+  chooseNode() {
+    let self = this;
+
+    let nodes = this.layout;
+    let lonely = _.filter(self.layout, function(l) { return self.numberOfNeighbors(l.x, l.y) <= 1; });
+    let crowded = _.filter(self.layout, function(l) { return self.numberOfNeighbors(l.x, l.y) > 1; });
+
+    if (lonely.length > 0 && crowded.length > 0) {
+      let rand = Math.random();
+      nodes = rand < this.branchRatio ? lonely : crowded;
+      // console.log('Choosing nodes: ' + (rand < this.branchRatio ? 'lonely' : 'crowded') );
+    }
+
+    return nodes[Math.floor(Math.random() * nodes.length)];
+
   }
 
   hasPosition(x, y) {

@@ -11,7 +11,7 @@ import systems from './data/systems';
 import salvage from './data/salvage';
 import ruination from './data/ruination';
 import weird from './data/weird';
-import modules from './data/modules';
+import modulesTable from './data/modules';
 import cargo from './data/cargo';
 import weapons from './data/weapons';
 
@@ -21,8 +21,8 @@ export default class Ship {
 
     this.title = tableItem.title;
     this.moduleNumber = tableItem.module_number;
-    this.levelNumber = tableItem.level_number;
     this.extraLevels = tableItem.extra_levels ? utils.numberOfExtraLevels(1, 0) : 0;
+    this.levelNumber = tableItem.level_number + this.extraLevels;
 
     this.traits = {
       habitability: utils.rollOn(habitable),
@@ -36,25 +36,54 @@ export default class Ship {
 
     this.equipment = {};
     this.survivors = {};
+    this.levels = []; // Each element has prop 'modules' and prop 'layout'
 
-    this.generateModuleContents();
+    this.generateShipLevels();
     this.setShipEquipment();
     this.setShipSurvivors();
 
-    this.moduleLayout = (new ModuleLayout(this.moduleNumber)).layout;
+    
+  }
+
+  generateShipLevels() {
+    let self = this;
+    this.levels = _.map(_.range(self.levelNumber), function(n) {
+      return {
+        'modules': self.generateModuleContents(),
+        'layout': (new ModuleLayout(self.moduleNumber)).layout
+      }
+    });
   }
 
   generateModuleContents() {
     let self = this; 
-    this.moduleContents = _.map(_.range(self.moduleNumber), function(i) {
-      return utils.rollOn(modules[utils.roll(6)]);
+    let modules = [];
+
+    // First module has to be a command module
+    let commandModule = {};
+    while (commandModule.title !== 'Command') {
+      commandModule = utils.rollOn(modulesTable[utils.roll(6)]);
+    }
+    modules.push(commandModule);
+
+    // Second module has to be a thrusters module
+    let thrustersModule = {};
+    while (thrustersModule.title !== 'Thrusters') {
+      thrustersModule = utils.rollOn(modulesTable[utils.roll(6)]);
+    }
+    modules.push(thrustersModule);
+
+    let otherModules = _.map(_.range(self.moduleNumber - 2), function(i) {
+      return utils.rollOn(modulesTable[utils.roll(6)]);
     });
-    this.prepareModuleContents();
+    modules = _.shuffle(modules.concat(otherModules));
+
+    return this.prepareModuleContents(modules);
   }
 
-  prepareModuleContents() {
+  prepareModuleContents(modules) {
     let self = this;
-    this.moduleContents = _.map(self.moduleContents, function(m) {
+    return _.map(modules, function(m) {
       return self.initModuleSurvivors(self.initModuleEquipment(m));
     });
   }
@@ -151,13 +180,15 @@ export default class Ship {
 
     this.equipment = {};
 
-    _.forEach(this.moduleContents, function(m) {
-      _.forEach(m.equipment, function(e) {
-        if (_.has(self.equipment, e.title)) {
-          self.equipment[e.title] += e.units;
-        } else {
-          self.equipment[e.title] = e.units;
-        }
+    _.forEach(this.levels, function(l) {
+      _.forEach(l.modules, function(m) {
+        _.forEach(m.equipment, function(e) {
+          if (_.has(self.equipment, e.title)) {
+            self.equipment[e.title] += e.units;
+          } else {
+            self.equipment[e.title] = e.units;
+          }
+        })
       })
     });
 
@@ -191,16 +222,16 @@ export default class Ship {
       self.survivors[s.title] = utils.diceRoll(s.units);
     });    
 
-    _.forEach(this.moduleContents, function(m) {
-      _.forEach(m.survivors, function(s) {
-        if (_.has(self.survivors, s.title)) {
-          self.survivors[s.title] += s.units;
-        } else {
-          self.survivors[s.title] = s.units;
-        }
+    _.forEach(this.levels, function(l) {
+      _.forEach(l.modules, function(m) {
+        _.forEach(m.survivors, function(s) {
+          if (_.has(self.survivors, s.title)) {
+            self.survivors[s.title] += s.units;
+          } else {
+            self.survivors[s.title] = s.units;
+          }
+        })
       })
     });
-
-    // Todo: Survivors from cargo?
   }
 }

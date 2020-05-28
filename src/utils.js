@@ -18,7 +18,7 @@ export function diceRoll(diceStr) {
 }
 
 export function rollOn(tableObj) {
-	const tableRoll = roll(tableObj.dice);
+  const tableRoll = roll(tableObj.dice);
   const table = tableObj.table;
 
 	let tableEntry = {};
