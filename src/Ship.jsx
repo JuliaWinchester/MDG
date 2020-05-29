@@ -39,6 +39,7 @@ export default class Ship {
     this.levels = []; // Each element has prop 'modules' and prop 'layout'
 
     this.generateShipLevels();
+    this.generateLevelConnections();
     this.setShipEquipment();
     this.setShipSurvivors();
 
@@ -172,7 +173,56 @@ export default class Ship {
         units: utils.diceRoll(this.traits.salvageMaterial.units)
       };
     }
+  }
 
+  generateLevelConnections() {
+    let self = this;
+    this.levelConnections = [];
+
+    _.forEach(_.range(self.levelNumber - 1), function(i) {
+      self.levelConnections.push(self.newLevelConnection(i, i + 1));
+    });
+
+    console.log(this.levelConnections);
+  }
+
+  newLevelConnection(levelIdx1, levelIdx2) {
+    let self = this;
+    let connections = [];
+
+    console.log(levelIdx1);
+    console.log(levelIdx2);
+    console.log(this.levels);
+
+    _.forEach(self.levels[levelIdx1].layout, function(p1, p1Idx) {
+      _.forEach(self.levels[levelIdx2].layout, function(p2, p2Idx) {
+        if (p1.x === p2.x && p1.y === p2.y) {
+          connections.push([
+            { level: levelIdx1, module: p1Idx, type: 'up'},
+            { level: levelIdx2, module: p2Idx, type: 'down'}
+          ]);
+          
+        }
+      });
+    });
+
+    let connection = connections[Math.floor(Math.random() * connections.length)];
+
+    if (!_.has(this.levels[levelIdx1].modules[connection[0].module], 'connection')) {
+      this.levels[levelIdx1].modules[connection[0].module].connection = [];
+    }
+    this.levels[levelIdx1].modules[connection[0].module].connection.push( 
+      connection[1]
+    );
+
+    if (!_.has(this.levels[levelIdx2].modules[connection[1].module], 'connection')) {
+      this.levels[levelIdx2].modules[connection[1].module].connection = [];
+    }
+    this.levels[levelIdx2].modules[connection[1].module].connection.push(
+      connection[0]
+    );
+
+    return connection
   }
 
   setShipEquipment() {

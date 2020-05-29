@@ -1,26 +1,30 @@
-#id {
-	margin-bottom: 300px;
+#root {
+  position: relative;
+}
+
+.crt-style {
+	padding-bottom: 300px;
 }
 
 .profile-block {
-	background-color: limegreen;
+	background-color: rgb(50,255,0);
 }
 
 .module {
 	height: 100%;
 	width: 100%;
-	border: 1px solid black;
+	border: 1px solid rgb(50,255,0);
 	border-radius: 5px;
 	text-align: center;
 	overflow: hidden;
 }
 
 .moduleDescription {
-	border: 2px dashed green;
+	border: 2px dashed rgb(50,255,0);
 	position: absolute;
 	top: 90%;
 	left: 90%;
-	background: white;
+	background: black;
 	width: 200%;
 	min-height: 100%;
 	/*opacity: 0.95;*/
@@ -55,3 +59,16 @@
 	max-width: 100%;
 }
 
+.module-icon-row {
+	margin-top: 10%;
+}
+
+div[class*="col"] {
+	border: 1px solid rgb(50,255,0);
+	height: 20vh;
+	overflow: scroll;
+}
+
+/*div {
+	font-family: 'VT323', monospace !important;
+}*/

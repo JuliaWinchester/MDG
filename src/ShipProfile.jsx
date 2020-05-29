@@ -43,7 +43,6 @@ export default class ShipProfile extends React.PureComponent {
       return l;
     });
 
-    console.log(layout)
     return layout;
   }
 
@@ -68,7 +67,6 @@ export default class ShipProfile extends React.PureComponent {
       return l;
     });
 
-    console.log(layout);
     return layout;
   }
 
@@ -76,12 +74,10 @@ export default class ShipProfile extends React.PureComponent {
     // Generate items with properties from the layout, rather than pass the layout directly
     let tempVar = _.map(_.range(layout.length), function(i) {
       return (
-        <div className='profile-block' key={i}>
-          <span>{i}</span>
+        <div className='crt profile-block' key={i}>
         </div>
       );
     });
-    console.log(tempVar);
     return tempVar;
   }
 
@@ -93,10 +89,10 @@ export default class ShipProfile extends React.PureComponent {
     let layout = this.generateLayout();
 
     return (
-      <div style={{ width: this.props.width }}>
+      <div style={{ width: '100%' }}>
         <p><b>SHIP PROFILE: { this.props.view === 'front' ? 'Front' : 'Side' }</b></p>
         <div className='profile-view'>
-          <ReactGridLayout width={1200} layout={layout} onLayoutChange={this.onLayoutChange} cols={this.props.cols} rowHeight={Math.ceil(this.props.width/12 - 2)} {...this.props} style={{'border': '1px solid limegreen', 'maxWidth': '100%'}}>
+          <ReactGridLayout width={1200} layout={layout} onLayoutChange={this.onLayoutChange} cols={this.props.cols} rowHeight={40} {...this.props} style={{'border': '1px solid limegreen', 'maxWidth': '100%'}}>
             {this.generateDOM(layout)}
           </ReactGridLayout>
         </div>

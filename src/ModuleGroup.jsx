@@ -22,7 +22,7 @@ export default class ModuleGroup extends React.PureComponent {
     return _.map(_.range(this.props.items.length), function(i) {
       return (
         <div key={i} data-grid={self.props.layout[i]} >
-          <Module key={i} number={i} item={self.props.items[i]} />
+          <Module className='crt' key={i} number={i} item={self.props.items[i]} />
         </div>
       );
     });

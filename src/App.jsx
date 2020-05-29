@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactResizeDetector from 'react-resize-detector';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+
 import _ from "lodash";
 
 import ModuleGroup from './ModuleGroup';
@@ -46,16 +48,20 @@ function ShipLevels(props) {
 function ItemUnitsList(props) {
   let list = [];
   _.forIn(props.items, function(units, key) { 
-    list.push(<ul key={key}>{key} ({units})</ul>);
+    list.push(key + ' (' + units + ')');
   });
 
   if (list.length) {
     return (
-      list
+      <div>
+        <span>{ list.join(', ') }</span>
+      </div>
     );
   } else {
-    return ( 
-      <span>{props.emptyMsg}</span>
+    return (
+      <div>
+        <span>{ props.emptyMsg }</span>
+      </div>
     );
   }
 }
@@ -63,16 +69,12 @@ function ItemUnitsList(props) {
 function Description(props) {
   return (
     <div>
-      <div>This ship is a {props.ship.title}.</div>
-      <div>It has {props.ship.moduleNumber} modules per level.</div>
-      <div>There {props.ship.levelNumber > 1 ? 'are' : 'is'} {props.ship.levelNumber} standard level{props.ship.levelNumber === 1 ? '' : 's'} and {props.ship.extraLevels} extra level{props.ship.extraLevels === 1 ? '' : 's'}.</div>
-      <div>Systems status is: {props.ship.traits.systems.title}.</div>
-      <div>This ship became a derelict due to {props.ship.traits.ruination.title}. But what's weird about it is {props.ship.traits.weird.title}?</div>
-      <br />
-      <b>Equipment</b>
-      <ItemUnitsList items={props.ship.equipment} emptyMsg={'Empty!'} />
-      <b>Survivors</b>
-      <ItemUnitsList items={props.ship.survivors} emptyMsg={'None'} />
+      <div>Class: {props.ship.title}</div>
+      <div>Modules Per Level: {props.ship.moduleNumber}</div>
+      <div>Levels: {props.ship.levelNumber}</div>
+      <div>Systems Status: {props.ship.traits.systems.title}.</div>
+      <div>Cause of Ruination: {props.ship.traits.ruination.title}</div>
+      <div>Strange Quirk: {props.ship.traits.weird.title}</div>
     </div>
   ); 
 }
@@ -107,39 +109,47 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <GenerateShipButton
-          onClick={(e) => this.handleGenerateShipClick(e)}
-        />
-        <Description
-          ship={this.state.ship}
-        />
-        <br />
-        <ReactResizeDetector
-          handleWidth
-          handleHeight
-          render={({ width, height }) => (
-            <div>
-              <ShipProfile
-                view='front'
-                levels={this.state.shipLevels}
-                cols={12} 
-                width={width/2}
+      <div className='crt crt-style'>
+        <Grid fluid>
+          <Row>
+            <Col xs={3}>
+              <GenerateShipButton
+                onClick={(e) => this.handleGenerateShipClick(e)}
               />
+              <Description
+                ship={this.state.ship}
+              />
+            </Col>
+            <Col xs={3}>
+              <b>Equipment</b>
+              <ItemUnitsList items={this.state.ship.equipment} emptyMsg={'Empty!'} />
+            </Col>
+            <Col xs={3}>
+              <b>Survivors</b>
+              <ItemUnitsList items={this.state.ship.survivors} emptyMsg={'None'} />
+            </Col>
+            <Col xs={3}>
               <ShipProfile
                 view='side'
                 levels={this.state.shipLevels}
-                cols={12} 
-                width={width/2}
+                cols={12}
               />
-              <ShipLevels 
-                number={this.state.ship.levelNumber}
-                levels={this.state.ship.levels}
-                width={width} 
-              />
-            </div>
-          )}
-        />
+            </Col>
+          </Row>
+        </Grid>
+        <ReactResizeDetector
+              handleWidth
+              handleHeight
+              render={({ width, height }) => (
+                <div>                
+                  <ShipLevels 
+                    number={this.state.ship.levelNumber}
+                    levels={this.state.ship.levels}
+                    width={width} 
+                  />
+                </div>
+              )}
+            />
       </div>
     );
   }
